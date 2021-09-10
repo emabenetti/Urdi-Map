@@ -14,7 +14,13 @@ m = folium.Map(
 
 # Folium convierte el GeoJson a un objeto y lo agrega al mapa
 # name="" es el nombre que aparece en el menu de capas en la web
-folium.GeoJson(cuadras, name="Manzanas").add_to(m)
+# Se guarda el objeto GeoJson en la variable manzanas para despues seguir agregando cosas
+manzanas = folium.GeoJson(cuadras, name="Manzanas").add_to(m)
+
+# Se le agrega un popup a la capa manzanas para cuando el usuario hace click
+# Se pasa como parámetros la lista de propiedades en el json de cuadras
+# TODO Se puede usar HTML para dejarlo mas presentable.
+folium.features.GeoJsonPopup(fields=['id','Sector','Uso_suelo','EDIF'], labels=False).add_to(manzanas)
 
 # Agrego como opcion usar Open Street Map en vez de CartoDB Positron
 folium.TileLayer('openstreetmap').add_to(m)
