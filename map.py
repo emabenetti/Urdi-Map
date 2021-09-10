@@ -20,7 +20,7 @@ manzanas = folium.GeoJson(cuadras, name="Manzanas").add_to(m)
 # Se le agrega un popup a la capa manzanas para cuando el usuario hace click
 # Se pasa como parámetros la lista de propiedades en el json de cuadras
 # TODO Se puede usar HTML para dejarlo mas presentable.
-folium.features.GeoJsonPopup(fields=['id','Sector','Uso_suelo','EDIF'], labels=False).add_to(manzanas)
+folium.features.GeoJsonPopup(aliases=['ID: ', 'Sector: ', 'Uso del suelo: ', 'Edificio: '], fields=['id','Sector','Uso_suelo','EDIF'], labels=True).add_to(manzanas)
 
 # Agrego como opcion usar Open Street Map en vez de CartoDB Positron
 folium.TileLayer('openstreetmap').add_to(m)
