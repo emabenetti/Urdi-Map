@@ -3,8 +3,14 @@ Mapa interactivo de Urdinarrain
 
 Creado con Python, Leaflet JS, Bootstrap y Jquery
 
-Por ahora solo muestra la ciudad en unas coordenadas y un zoom iniciales. 
+La idea es conseguir datos geo referenciados para crear capas que van por encima del mapa. Hasta ahora a modo de ejemplo hay:
 
-La idea es conectarlo a un índice de datos espaciales que contenga diferentes campos con los metadatos geográficos de la ciudad guardados en una base de datos. 
+- Loteos (manzanas)
+- Los lotes originales de 1905
+- La curva de nivel del terreno
+
+También al hacer click o tocar con el dedo en un dispositivo táctil se despliega info de cada loteo (actualmente solo cuento con la info del área)
+
+Estoy en contacto con el municipio de Urdinarrain para conseguir mas datos geográficos.
 
 - Work in progress -
